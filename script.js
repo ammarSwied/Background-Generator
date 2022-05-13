@@ -1,26 +1,28 @@
-var _ = require('lodash');
-
-console.log(_.without);
-
 // *get the h3 so we can display the result rgb value
-var h3Value = document.querySelector("h3");
+let h3Value = document.querySelector("h3");
 
 //* get the body so we can change the background
-var body = document.querySelector(".body");
+let body = document.querySelector(".body");
 
 // *get the input values
-var color1 =  document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
+let color1 =  document.querySelector(".color1");
+let color2 = document.querySelector(".color2");
 
 
 //* create a function that changes the color
 
-function setColor() {
+const setColor = () => {
 
-    body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
-
-    h3Value.textContent = body.style.background + ";";
+    body.style.background = `linear-gradient(to right, ") ${color1.value} , ${color2.value} "`;
+    h3Value.textContent = `${body.style.background};`
 }
+
+// function setColor() {
+
+//     body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
+
+//     h3Value.textContent = body.style.background + ";";
+// }
 
 // *? set event to color1
 color1.addEventListener("input" , setColor);
@@ -28,12 +30,12 @@ color1.addEventListener("input" , setColor);
 // *? set event to color2
 color2.addEventListener("input" , setColor);
 
-const persons = {
-    fistname: "John",
-    lastname: "Doe",
-    age: 50,
-    eyeColor: "blue",
-}
+// const persons = {
+//     fistname: "John",
+//     lastname: "Doe",
+//     age: 50,
+//     eyeColor: "blue",
+// }
 
 
 //! new syntax for javascript

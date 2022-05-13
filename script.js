@@ -1,3 +1,7 @@
+var _ = require('lodash');
+
+console.log(_.without);
+
 // *get the h3 so we can display the result rgb value
 var h3Value = document.querySelector("h3");
 

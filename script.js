@@ -11,18 +11,18 @@ let color2 = document.querySelector(".color2");
 
 //* create a function that changes the color
 
-const setColor = () => {
+// const setColor = () => {
 
-    body.style.background = `linear-gradient(to right, ") ${color1.value} , ${color2.value} "`;
-    h3Value.textContent = `${body.style.background};`
-}
-
-// function setColor() {
-
-//     body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
-
-//     h3Value.textContent = body.style.background + ";";
+//     body.style.background = `linear-gradient(to right, ${color1.value} , ${color2.value});`
+//     h3Value.textContent = `${body.style.background};`
 // }
+
+function setColor() {
+
+    body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
+
+    h3Value.textContent = body.style.background + ";";
+}
 
 // *? set event to color1
 color1.addEventListener("input" , setColor);
